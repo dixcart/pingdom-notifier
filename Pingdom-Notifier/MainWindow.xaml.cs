@@ -66,7 +66,7 @@ namespace PingdomNotifier
             if (strResponse != null) {
                 JObject jVers = JObject.Parse(strResponse);
                 foreach (JObject j in jVers["checks"]) {
-                    if ((string)j["status"] != "up")
+                    if ((string)j["status"] == "down")
                     {
                         if (strTitle == "")
                         {
