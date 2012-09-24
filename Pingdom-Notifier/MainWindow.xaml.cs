@@ -120,6 +120,7 @@ namespace PingdomNotifier
             }
 
             MyNotifyIcon.ShowBalloonTip(title, text, icon);
+            MyNotifyIcon.ToolTipText = title;
 
             //hide balloon
             //MyNotifyIcon.HideBalloonTip();
@@ -170,22 +171,36 @@ namespace PingdomNotifier
             }
             catch (WebException e)
             {
-                switch (((HttpWebResponse)e.Response).StatusCode)
+                if (e.Response != null)
                 {
-                    case HttpStatusCode.NotFound:
-                        ChangeIcon("yellow");
-                        //should never trigger in a controlled environ like this
-                        break;
-                    case HttpStatusCode.InternalServerError:
-                        //There has been an error at pingdom's end.
-                        ChangeIcon("yellow");
-                        break;
-                    case HttpStatusCode.Forbidden:
-                    case HttpStatusCode.Unauthorized:
-                        //Login details are wrong
-                        ShowStandardBalloon("Login failed", "Please check login details are correct", "grey");
-                        break;
+                    switch (((HttpWebResponse)e.Response).StatusCode)
+                    {
+                        case HttpStatusCode.NotFound:
+                            ChangeIcon("yellow");
+                            //should never trigger in a controlled environ like this
+                            break;
+                        case HttpStatusCode.InternalServerError:
+                            //There has been an error at pingdom's end.
+                            ChangeIcon("yellow");
+                            break;
+                        case HttpStatusCode.Forbidden:
+                        case HttpStatusCode.Unauthorized:
+                            //Login details are wrong
+                            ShowStandardBalloon("Login failed", "Please check login details are correct", "grey");
+                            break;
+                        default:
+                            ShowStandardBalloon("Other Error", e.Message, "grey");
+                            break;
+                    }
                 }
+                else
+                {
+                    ShowStandardBalloon("Other Error", e.Message, "grey");
+                }
+            }
+            catch (Exception e)
+            {
+                ShowStandardBalloon("Other Error", e.Message, "grey");
             }
 
             return strReturn;
