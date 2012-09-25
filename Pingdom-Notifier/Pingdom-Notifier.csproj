@@ -27,11 +27,11 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://www.dixcart.com/dts/pingdom-notifier/</InstallUrl>
     <SupportUrl>http://www.dixcart.com/it</SupportUrl>
-    <ProductName>Pingdom Notifier</ProductName>
+    <ProductName>Desktop Notifier for Pingdom</ProductName>
     <PublisherName>Dixcart Technical Solutions</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>14</ApplicationRevision>
     <ApplicationVersion>0.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -58,7 +58,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>res\pingdom-icon.ico</ApplicationIcon>
+    <ApplicationIcon>12379167281228299248jean_victor_balin_icon_monitoring.svg.hi.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>C35A6C698728A1803A38474CF16F8BB83FC2D47A</ManifestCertificateThumbprint>
@@ -163,6 +163,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="12379167281228299248jean_victor_balin_icon_monitoring.svg.hi.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
