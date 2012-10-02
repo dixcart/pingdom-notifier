@@ -4,7 +4,7 @@ A simple application that replicates the features of the, now defunct, [Pingdom 
 
 This is in an early stage of development and seeks only to replicate the features of the original at this stage.  The app is set to automatically check for updates on a daily basis, this will be relaxed over time, once early bugs are squashed.
 
-[Install Desktop Notifier for Pingdom and all dependencies](http://www.dixcart.com/dts/pingdom-notifier/index.html)
+[Install Desktop Notifier for Pingdom and all dependencies](http://blogs.dixcart.com/public/technology/2012/10/pingdom-desktop-notifier-is-dead-long-live-desktop-notifier-for-pingdom.html)
 
 **NB**: This application is not provided or endorsed by Pingdom and is entirely unofficial.
 
